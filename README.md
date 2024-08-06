@@ -52,7 +52,7 @@ In summary, our main contributions in this paper can be summarized as follows:
 
 ## Citation
 
-```tex
+```
 @inproceedings{zhang-etal-2023-crash,
     title = "{CR}a{S}h: Clustering, Removing, and Sharing Enhance Fine-tuning without Full Large Language Model",
     author = "Zhang, Kaiyan  and
