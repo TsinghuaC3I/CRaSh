@@ -13,9 +13,11 @@ In summary, our main contributions in this paper can be summarized as follows:
 
 ![](assert/figure2.jpg)
 
-- Code (comming soon)
+- Computing representation similarity via CKA among layers in LLMs
 
-
+  ```bash
+  bash scripts/run_utils_main_sim.py
+  ```
 
 
 
@@ -23,17 +25,43 @@ In summary, our main contributions in this paper can be summarized as follows:
 
 ![](assert/figure3.jpg)
 
-- Code (comming soon)
+- Runing tuned-lens experiments among layers in LLMs
 
+  ```bash
+  bash scripts/run_utils_main_tuned_lens_cluster.sh
+  ```
 
+  
 
 ## CRaSh Framework
 
 ![](assert/figure4.jpg)
 
-- Code (comming soon)
+For the implementation of CRaSh method, we mainly modified training code from [OffsiteTuning](https://github.com/mit-han-lab/offsite-tuning/), where we rewrite the layer selection functions as shown in `src/train.py`.
 
+- Step 1: Running layer cluster
 
+  ```bash
+  bash scripts/run_utils_layer_cluster.sh
+  ```
+
+- Step 2: Finetuning models with CRaSh method
+
+  ```bash
+  bash scripts/run_src_train_1.3b.sh
+  
+  bash scripts/run_src_train_6.7b.sh
+  ```
+
+- Step 3: Evaluate the trained models with lm-eval
+
+  ```bash
+  bash scripts/run_src_eval_1.3b.sh
+  
+  bash scripts/run_src_eval_6.7b.sh
+  ```
+
+  
 
 ## Experimental Results
 
@@ -41,19 +69,21 @@ In summary, our main contributions in this paper can be summarized as follows:
 
 ![](assert/table1.jpg)
 
-- Code (comming soon)
-
 
 
 ### Ablation Study
 
 ![](assert/figure6.jpg)
 
-- Code (comming soon)
+- Visualize the interplote plots on finetuned models
 
+  ```bash
+  bash scripts/run_utils_interp_1d.sh
+  
+  bash scripts/run_utils_interp_2d.sh
+  ```
 
-
-
+  
 
 ## Citation
 
